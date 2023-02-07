@@ -7,25 +7,38 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="362dp"
+        android:layout_height="728dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="342dp"
             android:layout_height="535dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:gravity="top"
             android:orientation="vertical"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="184dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
 
             <EditText
                 android:id="@+id/edtTabla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Digite el valor de la tabla a generar"
                 android:inputType="textPersonName"
-                android:text="Name"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
@@ -37,9 +50,10 @@
 
             <EditText
                 android:id="@+id/edtResultado"
-                android:layout_width="match_parent"
-                android:layout_height="464dp"
+                android:layout_width="332dp"
+                android:layout_height="357dp"
                 android:ems="10"
+                android:enabled="false"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 tools:ignore="SpeakableTextPresentCheck" />
