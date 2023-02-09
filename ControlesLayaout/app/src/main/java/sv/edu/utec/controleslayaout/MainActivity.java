@@ -3,6 +3,7 @@ package sv.edu.utec.controleslayaout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -26,5 +27,18 @@ public class MainActivity extends AppCompatActivity {
         String [] opciones = {"Seleccione un pais","Guatemala", "El Salvador", "Honduras", "Nicaragua", "Costa Rica", "Panama"};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, opciones);
         spnPais.setAdapter(adaptador);
+    }
+
+    public  void Almacenar(View v){
+        String datos;
+        String seleccion = spnPais.getSelectedItem().toString();
+        if(seleccion.equals("Seleccione un pais")){
+            datos = "No selecciono ningun pais\n";
+        }
+        else {
+            datos = seleccion+"\n";
+        }
+
+        etInfo.append(datos);
     }
 }
