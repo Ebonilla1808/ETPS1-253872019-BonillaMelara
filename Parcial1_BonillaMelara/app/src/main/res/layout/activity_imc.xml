@@ -7,18 +7,51 @@
     tools:context=".ImcActivity">
 
     <LinearLayout
-        android:layout_width="430dp"
-        android:layout_height="741dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="346dp"
+        android:layout_height="548dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Calculo de  IMC"
+            app:autoSizeTextType="uniform" />
+
+        <EditText
+            android:id="@+id/edtPeso"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Peso (kg)" />
+
+        <EditText
+            android:id="@+id/edtAltura"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:hint="Altura (cm)" />
+
+        <Button
+            android:id="@+id/btnCalcularImc"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Calcular IMC" />
+
+        <TextView
+            android:id="@+id/txwResultado"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Resultado"
+            app:autoSizeTextType="uniform" />
 
     </LinearLayout>
 
