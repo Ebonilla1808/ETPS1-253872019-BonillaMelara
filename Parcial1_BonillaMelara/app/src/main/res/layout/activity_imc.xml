@@ -37,12 +37,13 @@
             android:id="@+id/edtAltura"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:hint="Altura (cm)" />
+            android:hint="Altura (m)" />
 
         <Button
             android:id="@+id/btnCalcularImc"
             android:layout_width="match_parent"
             android:layout_height="75dp"
+            android:onClick="CalcularImc"
             android:text="Calcular IMC" />
 
         <TextView
