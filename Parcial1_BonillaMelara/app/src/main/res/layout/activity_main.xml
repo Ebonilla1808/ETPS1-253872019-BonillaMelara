@@ -19,6 +19,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Login"
+            app:autoSizeTextType="uniform" />
+
         <EditText
             android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
