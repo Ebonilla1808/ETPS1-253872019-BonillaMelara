@@ -6,13 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnMetodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:onClick="Pantalla"
+        android:text="Activar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <Button
+        android:id="@+id/btnaSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Salir"
+        android:text="Salir"
+        app:layout_constraintEnd_toEndOf="@+id/btnListener"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/btnListener"
+        app:layout_constraintTop_toBottomOf="@+id/btnListener" />
+
+    <Button
+        android:id="@+id/btnListener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activar Listener"
+        app:layout_constraintEnd_toEndOf="@+id/btnMetodo"
+        app:layout_constraintStart_toStartOf="@+id/btnMetodo"
+        app:layout_constraintTop_toBottomOf="@+id/btnMetodo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
