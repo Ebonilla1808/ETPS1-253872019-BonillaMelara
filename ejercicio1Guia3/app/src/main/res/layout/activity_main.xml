@@ -7,12 +7,66 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/text"
+        android:layout_width="285dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="24dp"
+        android:text="Descripcion: Se ingresa por teclado un valor entero, mostrar una leyenda que indique si el número es  positivo, nulo o negativo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvTitulo"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        android:text="Ejercicio 1 - Guia 3"
+        android:textColor="#076D9C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <EditText
+        android:id="@+id/edValor"
+        android:layout_width="238dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:hint="Ingrese el valor entero:" />
+
+    <TextView
+        android:id="@+id/txvResultado"
+        android:layout_width="248dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="116dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="146dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="84dp"
+        android:onClick="calculo"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/txvResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:backgroundTint="#04A192"
+        tools:onClick="calculoDelValor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
