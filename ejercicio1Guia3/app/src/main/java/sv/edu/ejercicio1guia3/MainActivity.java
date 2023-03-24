@@ -27,20 +27,27 @@ public class MainActivity extends AppCompatActivity {
     }
     public void calculo (View v) {
         try {
-
             int numero = Integer.parseInt(edtValor.getText().toString());
-
+            String leyenda;
             if(numero > 0) {
-                txvrResultado.setText("El número es positivo");
+
+                leyenda="El número es positivo";
             } else if(numero == 0) {
-                txvrResultado.setText("El número es nulo");
+
+                leyenda="El número es nulo";
             } else {
-                txvrResultado.setText("El número es negativo");
+
+                leyenda="El número es negativo";
             }
+
+            Intent intent = new Intent(getApplicationContext(), pantallaDos.class);
+            intent.putExtra("leyenda", leyenda);
+            startActivity(intent);
 
         }
         catch (Exception e){
-            txvrResultado.setText("El valor ingresado no es valido. Porfavor, ingrese un numero entero");
+            txvrResultado.setText("El valor ingresado no es valido. Porfavor, " +
+                    "ingrese un numero entero");
         }
     }
 }
