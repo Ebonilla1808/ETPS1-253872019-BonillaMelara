@@ -2,6 +2,7 @@ package sv.edu.ejercicio1guia3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void calculo (View v) {
         try {
+
             int numero = Integer.parseInt(edtValor.getText().toString());
 
             if(numero > 0) {
