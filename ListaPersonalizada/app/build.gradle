@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'sv.edu.utec.listapersonalizada'
+    namespace 'com.example.listapersonalizada'
     compileSdk 33
 
     defaultConfig {
-        applicationId "sv.edu.utec.listapersonalizada"
+        applicationId "com.example.listapersonalizada"
         minSdk 24
         targetSdk 33
         versionCode 1
