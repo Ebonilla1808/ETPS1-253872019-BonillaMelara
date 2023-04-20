@@ -3,12 +3,17 @@ package sv.edu.utec.parcial3_bonillamelara;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -21,10 +26,26 @@ import sv.edu.utec.parcial3_bonillamelara.clases.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView btnNav;
+    private FrameLayout fragmentCont;
+    private ImageView btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); btnNav=findViewById(R.id.btnNav);
+        fragmentCont = findViewById(R.id.fragmentCont);
+        btnAdd = findViewById(R.id.btnAdd);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cargar fragmento en el FrameLayout
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                AddFragment fragment = new AddFragment(); // Instancia del fragmento que deseas cargar
+                fragmentTransaction.replace(R.id.fragmentCont, fragment);
+                fragmentTransaction.commit();
+            }
+        });
 
         btnNav.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) navaListener);
     }
