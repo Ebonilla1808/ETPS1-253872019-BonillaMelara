@@ -17,12 +17,14 @@ import sv.edu.utec.parcial4_bonillamelara.adaptadores.LstClientesAdapter;
 import sv.edu.utec.parcial4_bonillamelara.datos.Clientes;
 import sv.edu.utec.parcial4_bonillamelara.entidades.EntClientes;
 
+import androidx.recyclerview.widget.DividerItemDecoration;
 
 public class ClientesFragment extends Fragment {
 
 
 
     RecyclerView listaClientes;
+
     ArrayList<EntClientes> AListClientes;
     Context context;
     public ClientesFragment() {
@@ -39,6 +41,8 @@ public class ClientesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         View view;
         view=inflater.inflate(R.layout.fragment_clientes, container, false);
         listaClientes=view.findViewById(R.id.rcvLstProveedores);
@@ -51,6 +55,12 @@ public class ClientesFragment extends Fragment {
         LstClientesAdapter adapter=new LstClientesAdapter(dbClientes.mostrar());
         listaClientes.setAdapter(adapter);
         // Inflate the layout for this fragment
+
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(listaClientes.getContext(),
+                LinearLayoutManager.VERTICAL);
+
+        listaClientes.addItemDecoration(dividerItemDecoration);
         return view;
     }
 }

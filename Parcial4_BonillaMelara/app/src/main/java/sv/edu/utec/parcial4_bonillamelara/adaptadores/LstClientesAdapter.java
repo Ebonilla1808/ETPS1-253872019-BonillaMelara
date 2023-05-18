@@ -35,10 +35,10 @@ public class LstClientesAdapter extends RecyclerView.Adapter<LstClientesAdapter.
     public void onBindViewHolder(@NonNull LstClientesAdapter.ClientesViewHolder holder, int position) {
 
        // holder.viewId.setText(listaprove.get(position).getID_Cliente());
-        holder.viewNombre.setText(listaprove.get(position).getsNombreCliente());
-        holder.viewApellido.setText(listaprove.get(position).getsApellidosCliente());
-        holder.viewDireccion.setText(listaprove.get(position).getsDireccionClientes());
-        holder.viewCiudad.setText(listaprove.get(position).getsCiudadCliente());
+        holder.viewNombre.setText("Nombre: \t\t"+listaprove.get(position).getsNombreCliente());
+        holder.viewApellido.setText("Apellido: \t\t"+listaprove.get(position).getsApellidosCliente());
+        holder.viewDireccion.setText("Direccion: \t\t"+listaprove.get(position).getsDireccionClientes());
+        holder.viewCiudad.setText("Ciudad: \t\t"+listaprove.get(position).getsCiudadCliente());
     }
 
     @Override
