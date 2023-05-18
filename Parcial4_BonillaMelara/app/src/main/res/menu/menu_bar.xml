@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/verclientes"
+            android:icon="@drawable/ver_icon"
+            android:title="Consultar Clientes" />
+        <item android:id="@+id/insertarclientes"
+            android:icon="@drawable/add_icon"
+            android:title="Agregar Clientes" />
+        <item android:id="@+id/matricula"
+            android:icon="@drawable/matricula_icon"
+            android:title="Matricular vehiculos" />
+
+
+    </group>
+</menu>

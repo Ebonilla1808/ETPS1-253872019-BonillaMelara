@@ -13,9 +13,10 @@ import sv.edu.utec.parcial4_bonillamelara.entidades.EntClientes;
 
 public class Clientes extends BaseHelper{
 
-    Context contex;
+    Context context;
     public Clientes(@Nullable Context context) {
         super(context);
+        this.context = context;
     }
 
     public long insertar(String sNombreCliente,String sApellidosCliente, String sDireccionClientes, String sCiudadCliente){
@@ -23,7 +24,7 @@ public class Clientes extends BaseHelper{
         long codigo=0;
         try {
 
-            BaseHelper baseHelp = new BaseHelper(contex);
+            BaseHelper baseHelp = new BaseHelper(context);
             SQLiteDatabase bd = baseHelp.getWritableDatabase();
 
             ContentValues valoresProv = new ContentValues();
@@ -43,7 +44,7 @@ public class Clientes extends BaseHelper{
     }
 
     public ArrayList<EntClientes> mostrar(){
-        BaseHelper baseHelp = new BaseHelper(contex);
+        BaseHelper baseHelp = new BaseHelper(context);
         SQLiteDatabase bd = baseHelp.getWritableDatabase();
         ArrayList<EntClientes>listaProvedores=new ArrayList<>();
         EntClientes entClientes=null;

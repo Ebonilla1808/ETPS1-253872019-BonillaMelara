@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientesInsertFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtNombreCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese el nombre del cliente" />
+
+        <EditText
+            android:id="@+id/edtApellidoCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese el apellido" />
+
+        <EditText
+            android:id="@+id/edtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese la direccion" />
+        <EditText
+            android:id="@+id/edtCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese el ciudad" />
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tvMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+</FrameLayout>
